@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 20:53:27 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/04/02 10:12:25 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/03 17:01:28 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,9 @@ void	check_av(int ac, char **av, t_stacks *stacks, int index)
 	}
 }
 
-void	print_arr(t_stacks *stacks)
+void	print_arr(t_stacks *stacks, char *msg)
 {
-	ft_printf("Sorted array: ");
+	ft_printf("%s", msg);
 	int j = 0;
 	while (j < stacks->a.size)
 	{

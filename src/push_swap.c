@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 15:15:16 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/04/02 15:38:03 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/03 17:10:51 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ int main(int ac, char **av)
 		;//only one number to sort, function to clean av goes here
 	else
 		check_av(ac, av, stacks, 0);
-	//ft_printf("Original: ");
-	//print_arr(stacks);
+	print_arr(stacks, "Original: ");
 	if (already_sorted(stacks))
 		free_all(stacks, "Already sorted!", 1);
 	if (stacks->a.size == 2 && stacks->a.nb[0] > stacks ->a.nb[1])
@@ -39,7 +38,7 @@ int main(int ac, char **av)
 		five_sort(stacks);
 	else
 		radix_sort(stacks);
-	print_arr(stacks);
-	free_all(stacks, "", 0);
+	print_arr(stacks, "Sorted: ");
+	free_all(stacks, "Stacks freed!", 1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 15:15:19 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/04/02 10:12:04 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/03 17:01:57 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	five_sort(t_stacks *stacks);
 void	radix_sort(t_stacks *stacks);
 int		already_sorted(t_stacks *stacks);
 int		check_dups(t_mstack stack, int num);
+
 //Frees
 void	free_all(t_stacks *stacks, char *error_msg, int i);
 
@@ -48,7 +49,7 @@ void	free_all(t_stacks *stacks, char *error_msg, int i);
 void	update_index(t_stacks *stacks);
 void	small_a_to_b(t_stacks *stacks);
 int		index_min(int *num, int size);
-void	print_arr(t_stacks *stacks);
+void	print_arr(t_stacks *stacks, char *msg);
 
 //Swap
 void	swap(t_mstack *stack);
