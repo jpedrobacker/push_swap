@@ -1,4 +1,6 @@
 *.out
 *.vscode
 *.a
+*.o
 push_swap
+checker_linux

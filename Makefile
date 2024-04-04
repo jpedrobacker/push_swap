@@ -1,5 +1,6 @@
 NAME = push_swap
-LIB = src/libftprintf.a
+LIBFTPRINTF = libftprintf/libftprintf.a
+LIBFT = libftprintf/libft/libft.a
 CC = gcc
 SRC_DIR = src/
 FIND = $(shell find $(SRC_DIR))
@@ -9,10 +10,10 @@ VAR = $(shell echo {1..100} | tr " " "\n" | sort --random-sort | tr "\n" " ")
 all: $(NAME)
 
 $(NAME): $(SRC)
-		$(CC) $(SRC) $(LIB) -o push_swap
+		$(CC) $(SRC) $(LIBFTPRINTF) -o push_swap
 
 big:
-	./push_swap 2 31 423 5 657 55 4343 234 534 65 74 43 45 76 55643
+	./push_swap 2
 
 test:
 		@echo $(VAR)
@@ -25,8 +26,24 @@ checkpoint:
 
 lib:
 	@make -C libftprintf
-	@make clean -C libftprintf
-	@mv libftprintf/libftprintf.a src
+
+test100a:	${NAME}
+			$(eval ARG = ${shell seq -1000000 1000000 | shuf -n 100})
+			./push_swap ${ARG} | ./checker_linux ${ARG}
+			@echo -n "Command: "
+			./push_swap ${ARG} | wc -l
+
+test500a:	${NAME}
+			$(eval ARG = ${shell seq -1000000 1000000| shuf -n 500})
+			./push_swap ${ARG} | ./checker_linux ${ARG}
+			@echo -n "Command: "
+			./push_swap ${ARG} | wc -l
 
 clean:
-	rm -rf *.a
+	@make clean -C libftprintf
+	rm -rf $(NAME)
+
+fclean: clean
+	@make fclean -C libftprintf
+
+re: fclean lib all

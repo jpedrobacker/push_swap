@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 15:15:19 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/04/03 17:01:57 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/04 11:27:28 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,13 @@ typedef struct s_stacks
 }	t_stacks;
 
 int		check_input(char *str);
+int		already_sorted(t_stacks *stacks);
+int		check_dups(t_mstack stack, int num);
 void	check_av(int ac, char **av, t_stacks *stack, int index);
-void	bubble_sort(int *stack, int size);
 void	tree_sort(t_stacks *stacks);
 void	four_sort(t_stacks *stacks);
 void	five_sort(t_stacks *stacks);
 void	radix_sort(t_stacks *stacks);
-int		already_sorted(t_stacks *stacks);
-int		check_dups(t_mstack stack, int num);
 
 //Frees
 void	free_all(t_stacks *stacks, char *error_msg, int i);

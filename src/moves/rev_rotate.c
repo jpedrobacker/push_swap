@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 10:39:22 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/02/29 13:23:02 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/04 11:28:17 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	rev_rotate(t_mstack *stack)
 	int	temp_index;
 	int	i;
 
-	if(stack->size < 2)
+	if (stack->size < 2)
 		return ;
 	temp_nb = stack->nb[stack->size - 1];
 	temp_index = stack->index[stack->size - 1];

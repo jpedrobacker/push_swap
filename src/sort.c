@@ -6,30 +6,11 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 10:01:43 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/03/31 19:19:44 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/04 11:27:51 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
-void	bubble_sort(int *stack, int size)
-{
-	int	j = 0;
-	int	temp;
-
-	while (j < (size - 1))
-	{
-		if (stack[j] > stack[j + 1])
-		{
-			temp = stack[j];
-			stack[j] = stack[j + 1];
-			stack[j + 1] = temp;
-			j = 0;
-		}
-		else
-			j++;
-	}
-}
 
 void	tree_sort(t_stacks *stacks)
 {
@@ -79,7 +60,7 @@ static void	radix_sort_b(t_stacks *stacks, int b_size, int bit_max, int i)
 	}
 	if (already_sorted(stacks))
 	{
-		while(stacks->b.size != 0)
+		while (stacks->b.size != 0)
 			pa(stacks);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 10:37:58 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/03/09 12:56:48 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/04 13:54:47 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	push(t_mstack *src, t_mstack *dst)
 		dst->nb[i] = dst->nb[i - 1];
 		dst->index[i] = dst->index[i - 1];
 	}
-	while (++j < src->size)
+	while (++j < src->size - 1)
 	{
 		src->nb[j] = src->nb[j + 1];
 		src->index[j] = src->index[j + 1];

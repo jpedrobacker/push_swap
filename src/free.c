@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:22:29 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/04/02 10:11:54 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/04 11:24:18 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ void	free_all(t_stacks *stacks, char *error_msg, int i)
 		ft_printf("%s\n", error_msg);
 	exit(0);
 }
-

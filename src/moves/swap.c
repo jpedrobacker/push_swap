@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:15:28 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/03/09 12:31:05 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/04 11:28:26 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	swap(t_mstack *stack)
 	int	temp_nb;
 	int	temp_i;
 
-	if(stack->size < 2)
+	if (stack->size < 2)
 		return ;
 	temp_nb = stack->nb[0];
 	temp_i = stack->index[0];

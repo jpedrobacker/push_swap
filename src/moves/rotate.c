@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 10:13:12 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/02/29 13:22:13 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/04 13:54:19 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	rotate(t_mstack *stack)
 	temp_nb = stack->nb[0];
 	temp_index = stack->index[0];
 	i = 0;
-	while (i < stack->size)
+	while (i < stack->size - 1)
 	{
 		stack->nb[i] = stack->nb[i + 1];
 		stack->index[i] = stack->index[i + 1];
