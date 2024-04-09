@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:42:21 by jbergfel          #+#    #+#             */
-/*   Updated: 2024/04/04 13:04:46 by jbergfel         ###   ########.fr       */
+/*   Updated: 2024/04/09 12:12:43 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	update_index(t_stacks *stacks)
 
 	index_a = malloc(stacks->a.size * sizeof * index_a);
 	if (index_a == NULL)
-		free_all(stacks, "Error!", 1);
+		free_all(stacks, "Error", 1);
 	i = -1;
 	while (++i < stacks->a.size)
 	{
