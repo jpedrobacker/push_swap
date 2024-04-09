@@ -28,13 +28,13 @@ test100a:	${NAME}
 		$(eval ARG = ${shell seq 0 1000 | shuf -n 100})
 		./push_swap ${ARG} | ./checker_linux ${ARG}
 		@echo -n "Command: "
-		./push_swap ${ARG} | wc -l
+		valgrind ./push_swap ${ARG} | wc -l
 
 test500a:	${NAME}
 		$(eval ARG = ${shell seq 0 1000 | shuf -n 500})
 		./push_swap ${ARG} | ./checker_linux ${ARG}
 		@echo -n "Command: "
-		./push_swap ${ARG} | wc -l
+		valgrind ./push_swap ${ARG} | wc -l
 
 clean:
 	@make clean -C libftprintf
